@@ -7,14 +7,14 @@ import maskpass
 
 mydatabase = m.connect(host='localhost',user='root',password='777@Umair')
 cursor = mydatabase.cursor()
-# cursor.execute('create database new_emp')
+cursor.execute('create database new_emp')
 
 mydatabase = m.connect(host='localhost',user='root',password='777@Umair',database='new_emp')
 
 cursor = mydatabase.cursor()
 
-# cursor.execute('create table emp_data (ID int not null auto_increment, Name varchar(20), Post varchar(20),Contact BIGINT(50) UNSIGNED NOT NULL , Salary int, Joining_Date Date, PRIMARY KEY (ID))')
-# cursor.execute('ALTER TABLE emp_data AUTO_INCREMENT = 10001')
+cursor.execute('create table emp_data (ID int not null auto_increment, Name varchar(20), Post varchar(20),Contact BIGINT(50) UNSIGNED NOT NULL , Salary int, Joining_Date Date, PRIMARY KEY (ID))')
+cursor.execute('ALTER TABLE emp_data AUTO_INCREMENT = 10001')
 password = 'asdfg'
 
 def add_employee():
